@@ -1,11 +1,14 @@
 import { useCallback, useEffect, useState } from 'react';
-import { View } from 'react-native';
+import { Provider } from 'react-redux';
+import { StatusBar, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 
 import { publicStacks } from '~/stack';
+import { STYLES } from '~/constants';
+import store from '~/redux';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -16,6 +19,7 @@ function App() {
         await Font.loadAsync({
             'Montserrat-Regular': require('~/assets/fonts/Montserrat/Montserrat-Regular.ttf'),
             'Montserrat-Medium': require('~/assets/fonts/Montserrat/Montserrat-Medium.ttf'),
+            'Montserrat-SemiBold': require('~/assets/fonts/Montserrat/Montserrat-SemiBold.ttf'),
             'Roboto-Regular': require('~/assets/fonts/Roboto/Roboto-Regular.ttf'),
         });
     };
@@ -46,20 +50,23 @@ function App() {
     }
 
     return (
-        <View style={{ flex: 1,  fontFamily: 'Montserrat-Regular', }} onLayout={onLayoutRootView}>
-            <NavigationContainer>
-                <Stack.Navigator>
-                    {publicStacks.map((stack, index) => (
-                        <Stack.Screen
-                            key={index}
-                            name={stack.name}
-                            component={stack.component}
-                            options={stack.options}
-                        />
-                    ))}
-                </Stack.Navigator>
-            </NavigationContainer>
-        </View>
+        <Provider store={store}>
+            <View style={{ flex: 1, fontFamily: 'Montserrat-Regular' }} onLayout={onLayoutRootView}>
+                <StatusBar barStyle={'dark-content'} backgroundColor={STYLES.WHITE_COLOR} />
+                <NavigationContainer>
+                    <Stack.Navigator>
+                        {publicStacks.map((stack, index) => (
+                            <Stack.Screen
+                                key={index}
+                                name={stack.name}
+                                component={stack.component}
+                                options={stack.options}
+                            />
+                        ))}
+                    </Stack.Navigator>
+                </NavigationContainer>
+            </View>
+        </Provider>
     );
 }
 

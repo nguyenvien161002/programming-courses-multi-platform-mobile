@@ -1,9 +1,7 @@
-import LoginScreen from '~/screens/LoginScreen';
-import RegisterScreen from '~/screens/RegisterScreen';
+import AuthScreen from '~/screens/auth';
 
 const publicStacks = [
-    { name: 'Login', component: LoginScreen, options: { headerShown: false } },
-    { name: 'Register', component: RegisterScreen },
+    { name: 'Login', component: AuthScreen, options: { headerShown: false } },
 ];
 
 const privateStacks = [];

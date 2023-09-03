@@ -1,0 +1,26 @@
+import { StyleSheet } from 'react-native';
+import { STYLES } from '~/constants';
+
+const styles = StyleSheet.create({
+    buttonSubmit: {
+        width: '100%',
+        marginTop: 16,
+        backgroundColor: 'transparent',
+        height: 44,
+        borderRadius: 44,
+        overflow: 'hidden',
+        linearGradient: {
+            flex: 1,
+            width: '100%',
+            alignItems: 'center',
+            justifyContent: 'center',
+        },
+        text: {
+            fontFamily: 'Montserrat-SemiBold',
+            fontSize: 16,
+            color: STYLES.WHITE_COLOR
+        },
+    },
+});
+
+export default styles;
