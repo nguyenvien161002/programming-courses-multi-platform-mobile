@@ -4,27 +4,30 @@ import { STYLES } from '~/constants';
 
 const styles = StyleSheet.create({
     wrapper: {
-        display: 'flex',
         width: '100%',
         height: 44,
         borderWidth: 1,
         borderColor: '#dce0e3',
-        backgroundColor: '#fff',
         borderRadius: 40,
+        backgroundColor: 'white',
         flexDirection: 'row',
         alignItems: 'center',
         position: 'relative',
         marginBottom: 10,
+        overflow: 'hidden',
     },
     focused: {
-        borderColor: 'rgba(22, 24, 35, .4)',
+        borderColor: 'rgba(22, 24, 35, .6)',
         caretColor: STYLES.PRIMARY_COLOR,
+    },
+    visibility: {
+        display: 'none',
     },
     insideLeft: {
         flexDirection: 'row',
         alignItems: 'center',
-        paddingStart: 16,
-        paddingEnd: 4,
+        paddingLeft: 16,
+        paddingRight: 4,
         text: {
             fontFamily: 'Montserrat-Regular',
             fontSize: 14,
@@ -42,8 +45,8 @@ const styles = StyleSheet.create({
     insideRight: {
         height: '100%',
         right: 0,
-        paddingStart: 20,
-        paddingEnd: 20,
+        paddingLeft: 20,
+        paddingRight: 20,
         borderRadius: 40,
         alignItems: 'center',
         backgroundColor: '#ccc',
@@ -60,9 +63,9 @@ const styles = StyleSheet.create({
         height: '100%',
         fontFamily: 'Montserrat-Regular',
         fontSize: 14,
-        paddingStart: 20,
-        paddingEnd: 20,
-        overflow: 'hidden',
+        marginLeft: 20,
+        marginRight: 20,
+        backgroundColor: 'white'
     },
 });
 

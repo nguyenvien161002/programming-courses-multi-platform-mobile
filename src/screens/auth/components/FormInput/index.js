@@ -6,12 +6,12 @@ import { EvilIcons } from '@expo/vector-icons';
 import { getSignInWithEmail } from '~/redux/auth';
 import styles from './styles';
 
-function FormInput({ insideLeft, insideRight, handleSendCode, handleCallNPhoneCountry, ...props }) {
+function FormInput({ visibility, insideLeft, insideRight, handleSendCode, handleCallNPhoneCountry, ...props }) {
     const [isFocused, setIsFocused] = useState(false);
     const signInWithEmail = useSelector(getSignInWithEmail);
 
     return (
-        <View style={[styles.wrapper, isFocused && styles.focused]}>
+        <View style={[!visibility && styles.visibility, styles.wrapper, isFocused && styles.focused, ]}>
             {insideLeft && !signInWithEmail && (
                 <TouchableOpacity onPress={handleCallNPhoneCountry}>
                     <View style={styles.insideLeft}>

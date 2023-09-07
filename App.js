@@ -54,7 +54,7 @@ function App() {
             <View style={{ flex: 1, fontFamily: 'Montserrat-Regular' }} onLayout={onLayoutRootView}>
                 <StatusBar barStyle={'dark-content'} backgroundColor={STYLES.WHITE_COLOR} />
                 <NavigationContainer>
-                    <Stack.Navigator>
+                    <Stack.Navigator initialRouteName={'Home'} screenOptions={{ headerShown: false }}>
                         {publicStacks.map((stack, index) => (
                             <Stack.Screen
                                 key={index}

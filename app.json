@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Programing Course",
-    "slug": "mobile",
+    "slug": "multi-platprograming-course",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./public/logo-mini.png",

@@ -7,13 +7,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-
         text: {
             fontFamily: 'Montserrat-Medium',
             fontSize: 14,
             padding: 8,
-            paddingStart: 4,
-            paddingEnd: 4,
+            paddingLeft: 4,
+            paddingRight: 4,
         },
     },
     buttonSubmit: {

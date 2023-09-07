@@ -11,7 +11,7 @@ const initialState = {
     },
     contentFormAuth: {
         value: ['', ''],
-        keyboardType: ['phone-pad', 'number-pad'],
+        keyboardType: ['number-pad', 'number-pad'],
         name: ['phone', 'phone_code'],
         placeholder: ['Phone number', 'Confirmation code'],
         labelGroup: ['Phone number', 'With email'],

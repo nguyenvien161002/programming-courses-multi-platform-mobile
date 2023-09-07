@@ -1,7 +1,9 @@
 import AuthScreen from '~/screens/auth';
+import Home from '~/screens/home';
 
 const publicStacks = [
-    { name: 'Login', component: AuthScreen, options: { headerShown: false } },
+    { name: 'Home', component: Home },
+    { name: 'Login', component: AuthScreen },
 ];
 
 const privateStacks = [];
