@@ -23,6 +23,9 @@ const styles = StyleSheet.create({
     visibility: {
         display: 'none',
     },
+    isInValid: {
+        borderColor: STYLES.RED_COLOR,
+    },
     insideLeft: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -43,17 +46,23 @@ const styles = StyleSheet.create({
         width: 0.5,
     },
     insideRight: {
-        height: '100%',
-        right: 0,
+        height: '98%',
+        right: 1,
         paddingLeft: 20,
         paddingRight: 20,
         borderRadius: 40,
         alignItems: 'center',
-        backgroundColor: '#ccc',
+        backgroundColor: '#22dfbf',
         justifyContent: 'center',
         text: {
             fontFamily: 'Montserrat-Medium',
             fontSize: 14,
+            color: 'white',
+        },
+    },
+    disableInsideRight: {
+        backgroundColor: '#ccc',
+        text: {
             color: '#757575',
         },
     },
@@ -65,7 +74,7 @@ const styles = StyleSheet.create({
         fontSize: 14,
         marginLeft: 20,
         marginRight: 20,
-        backgroundColor: 'white'
+        backgroundColor: 'white',
     },
 });
 

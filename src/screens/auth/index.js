@@ -2,35 +2,30 @@ import { KeyboardAvoidingView, ScrollView, Text, TouchableOpacity, View } from '
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { getContentScreen, getSignInWithEmail, getSignInWithNumberPhone } from '~/redux/auth';
+import { authSelectors } from '~/redux/auth';
 import { authSlice } from '~/redux/auth';
 import { AUTH } from '~/constants';
 import AuthButton from '~/components/AuthButton';
-import FormSignIn from './components/FormSignIn';
-import FormSignUp from './components/FormSignUp';
+import FormAuth from './components/FormAuth';
 import styles from './styles';
 import images from '~/assets/images';
 
 function AuthScreen() {
     const dispatch = useDispatch();
-    const contentScreen = useSelector(getContentScreen);
     const Logo = images.logo;
+    
+    const { getContentScreen, getSignInWithEmail, getSignInWithNumberPhone } = authSelectors;
+    const contentScreen = useSelector(getContentScreen);
     const signInWNPhone = useSelector(getSignInWithNumberPhone);
     const signInWithEmail = useSelector(getSignInWithEmail);
 
     const handleChangeContentScreen = () => {
+        if (signInWithEmail) dispatch(authSlice.actions.handleResetContentFormAuth());
         dispatch(authSlice.actions.handleSignInWithEmail(false));
         dispatch(authSlice.actions.handleSignInWithNumberPhone(false));
         dispatch(
             contentScreen.unique === 1
-                ? authSlice.actions.handleSetContentScreen({
-                      unique: 2,
-                      titleAuth: 'Sign up for V3D8',
-                      dontHaveAcc: {
-                          title: `You already have an account?`,
-                          titleLink: 'Sign in',
-                      },
-                  })
+                ? authSlice.actions.handleSetContentScreen(AUTH.contentScreenSignUp)
                 : authSlice.actions.handleResetContentScreen(),
         );
     };
@@ -77,10 +72,8 @@ function AuthScreen() {
                                         />
                                     ))}
                                 </View>
-                            ) : contentScreen.unique === 1 ? (
-                                <FormSignIn />
                             ) : (
-                                <FormSignUp />
+                                <FormAuth />
                             )}
                         </View>
                         <View style={styles.dontHaveAccount}>

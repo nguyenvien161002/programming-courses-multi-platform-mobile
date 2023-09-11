@@ -2,6 +2,7 @@
 const STYLES = {
     PRIMARY_COLOR: '#00badf',
     ORANGE_COLOR: '#f05123',
+    RED_COLOR: '#ff0000',
     BLACK_COLOR: '#000000',
     WHITE_COLOR: '#ffffff',
     GRAY_COLOR: '#666666',

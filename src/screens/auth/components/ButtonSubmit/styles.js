@@ -18,7 +18,10 @@ const styles = StyleSheet.create({
         text: {
             fontFamily: 'Montserrat-SemiBold',
             fontSize: 16,
-            color: STYLES.WHITE_COLOR
+            color: STYLES.WHITE_COLOR,
+        },
+        disabled: {
+            opacity: 0.6,
         },
     },
 });

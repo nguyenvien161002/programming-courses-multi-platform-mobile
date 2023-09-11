@@ -31,8 +31,25 @@ const styles = StyleSheet.create({
         text: {
             fontFamily: 'Montserrat-SemiBold',
             fontSize: 16,
-            color: STYLES.WHITE_COLOR
+            color: STYLES.WHITE_COLOR,
         },
+    },
+    togglePassword: {
+        height: '100%',
+        paddingLeft: 12,
+        paddingRight: 12,
+        alignItems: 'center',
+        justifyContent: 'center',
+        icon: {
+            color: '#999',
+        }
+    },
+    msgError: {
+        fontFamily: 'Montserrat-Medium',
+        fontSize: 12,
+        paddingLeft: 10,
+        marginBottom: 10,
+        color: STYLES.RED_COLOR,
     },
 });
 

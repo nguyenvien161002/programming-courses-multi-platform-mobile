@@ -1,15 +1,10 @@
-const currentUserSelector = (state) => state.auth.currentUser;
-const visibilityMoDal = (state) => state.auth.visibilityMoDal;
-const getContentScreen = (state) => state.auth.contentScreen;
-const getContentFormAuth = (state) => state.auth.contentFormAuth;
-const getSignInWithEmail = (state) => state.auth.signInWithEmail;
-const getSignInWithNumberPhone = (state) => state.auth.signInWithNumberPhone;
-
-export {
-    currentUserSelector,
-    visibilityMoDal,
-    getContentScreen,
-    getSignInWithEmail,
-    getSignInWithNumberPhone,
-    getContentFormAuth,
+const authSelectors = {
+    currentUserSelector: (state) => state.auth.currentUser,
+    visibilityMoDal: (state) => state.auth.visibilityMoDal,
+    getContentScreen: (state) => state.auth.contentScreen,
+    getContentFormAuth: (state) => state.auth.contentFormAuth,
+    getSignInWithEmail: (state) => state.auth.signInWithEmail,
+    getSignInWithNumberPhone: (state) => state.auth.signInWithNumberPhone,
 };
+
+export default authSelectors;

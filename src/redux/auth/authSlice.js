@@ -1,21 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+import { AUTH } from '~/constants';
+
 const initialState = {
-    contentScreen: {
-        unique: 1,
-        titleAuth: 'Sign in to V3D8',
-        dontHaveAcc: {
-            title: `Don't have an account yet?`,
-            titleLink: 'Sign up',
-        },
-    },
-    contentFormAuth: {
-        value: ['', ''],
-        keyboardType: ['number-pad', 'number-pad'],
-        name: ['phone', 'phone_code'],
-        placeholder: ['Phone number', 'Confirmation code'],
-        labelGroup: ['Phone number', 'With email'],
-    },
+    contentScreen: AUTH.contentScreenSignIn,
+    contentFormAuth: AUTH.contentFormAuthNPhone,
     currentUser: null,
     signInWithEmail: false,
     signInWithNumberPhone: false,
@@ -26,7 +15,7 @@ const authSlice = createSlice({
     initialState,
     reducers: {
         handleSignInWithGoogle: (state, action) => {
-            state.currentUser = action.payload; /* mutation but run inmutation by IMMER */
+            state.currentUser = action.payload;    /* mutation but run inmutation by IMMER */
         },
         handleSignInWithEmail: (state, action) => {
             state.signInWithEmail = action.payload;
