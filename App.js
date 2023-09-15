@@ -10,11 +10,10 @@ import { publicStacks } from '~/stack';
 import { STYLES } from '~/constants';
 import store from '~/redux';
 
+const Stack = createNativeStackNavigator();
 SplashScreen.preventAutoHideAsync();
 
 function App() {
-    const Stack = createNativeStackNavigator();
-
     const loadFontsAsync = async () => {
         await Font.loadAsync({
             'Montserrat-Regular': require('~/assets/fonts/Montserrat/Montserrat-Regular.ttf'),
@@ -54,15 +53,26 @@ function App() {
             <View style={{ flex: 1, fontFamily: 'Montserrat-Regular' }} onLayout={onLayoutRootView}>
                 <StatusBar barStyle={'dark-content'} backgroundColor={STYLES.WHITE_COLOR} />
                 <NavigationContainer>
-                    <Stack.Navigator initialRouteName={'Home'} screenOptions={{ headerShown: false }}>
-                        {publicStacks.map((stack, index) => (
-                            <Stack.Screen
-                                key={index}
-                                name={stack.name}
-                                component={stack.component}
-                                options={stack.options}
-                            />
-                        ))}
+                    <Stack.Navigator initialRouteName={'DefaultLayout'} screenOptions={{ headerShown: false }}>
+                        {publicStacks.map((stack, index) => {
+                            let Screen = stack.component;
+                            if (stack.layout) {
+                                const Layout = stack.layout;
+                                Screen = (
+                                    <Layout>
+                                        <Screen />
+                                    </Layout>
+                                );
+                            }
+                            return (
+                                <Stack.Screen
+                                    key={index}
+                                    name={stack.name}
+                                    component={stack.layout ? () => Screen : Screen}
+                                    options={stack.options}
+                                />
+                            );
+                        })}
                     </Stack.Navigator>
                 </NavigationContainer>
             </View>

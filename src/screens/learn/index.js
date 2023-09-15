@@ -1,14 +1,14 @@
 import { Text, View } from 'react-native';
 import React from 'react';
 
-import styles from './stylesHome';
+import styles from './stylesLearn';
 
-function Home() {
+function Learn() {
     return (
         <View style={styles.wrapper}>
-            <Text>Home Screen</Text>
+            <Text>Learn Screen</Text>
         </View>
     );
 }
 
-export default Home;
+export default Learn;

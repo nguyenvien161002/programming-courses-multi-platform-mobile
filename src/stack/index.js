@@ -1,8 +1,8 @@
+import { DefaultLayout } from '~/components/Layout';
 import AuthScreen from '~/screens/auth';
-import Home from '~/screens/home';
 
 const publicStacks = [
-    { name: 'Home', component: Home },
+    { name: 'DefaultLayout', component: DefaultLayout },
     { name: 'Login', component: AuthScreen },
 ];
 

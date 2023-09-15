@@ -1,7 +1,7 @@
-import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 
-import styles from './styles';
+import styles from './stylesAuthButton';
 
 function AuthButton({ svgIcon, title, onPress }) {
     const SvgIcon = svgIcon;

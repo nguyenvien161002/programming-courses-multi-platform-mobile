@@ -1,14 +1,14 @@
 import { Text, View } from 'react-native';
 import React from 'react';
 
-import styles from './stylesHome';
+import styles from './stylesMenu';
 
-function Home() {
+function Menu() {
     return (
         <View style={styles.wrapper}>
-            <Text>Home Screen</Text>
+            <Text>Menu Screen</Text>
         </View>
     );
 }
 
-export default Home;
+export default Menu;

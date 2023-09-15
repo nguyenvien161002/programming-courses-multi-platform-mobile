@@ -18,7 +18,7 @@ const STYLES = {
     BUTTON_COLOR: '#1dbfaf',
     ICON_COLOR: '#707070',
     SCROLLBAR_COLOR: '#d9d9d9',
-    BUTTON_GRADIENT: `linear-gradient(70.06deg, '#2cccff' -5%, '#22dfbf' 106%)`,
+    BUTTON_GRADIENT: ['#2cccff', '#22dfbf'],
 };
 
 export default STYLES;

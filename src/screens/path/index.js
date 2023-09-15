@@ -1,14 +1,14 @@
 import { Text, View } from 'react-native';
 import React from 'react';
 
-import styles from './stylesHome';
+import styles from './stylesPath';
 
-function Home() {
+function Path() {
     return (
         <View style={styles.wrapper}>
-            <Text>Home Screen</Text>
+            <Text>Path Screen</Text>
         </View>
     );
 }
 
-export default Home;
+export default Path;

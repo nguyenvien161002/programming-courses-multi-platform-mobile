@@ -7,7 +7,7 @@ import { authSlice } from '~/redux/auth';
 import { AUTH } from '~/constants';
 import AuthButton from '~/components/AuthButton';
 import FormAuth from './components/FormAuth';
-import styles from './styles';
+import styles from './stylesAuth';
 import images from '~/assets/images';
 
 function AuthScreen() {
