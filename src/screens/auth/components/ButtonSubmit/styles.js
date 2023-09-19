@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
             justifyContent: 'center',
         },
         text: {
-            fontFamily: 'Montserrat-SemiBold',
+            fontFamily: STYLES.FONT_SEMIBOLD,
             fontSize: 16,
             color: STYLES.WHITE_COLOR,
         },

@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         text: {
-            fontFamily: 'Montserrat-Medium',
+            fontFamily: STYLES.FONT_MEDIUM,
             fontSize: 14,
             padding: 8,
             paddingLeft: 4,
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
             justifyContent: 'center',
         },
         text: {
-            fontFamily: 'Montserrat-SemiBold',
+            fontFamily: STYLES.FONT_SEMIBOLD,
             fontSize: 16,
             color: STYLES.WHITE_COLOR,
         },
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
         }
     },
     msgError: {
-        fontFamily: 'Montserrat-Medium',
+        fontFamily: STYLES.FONT_MEDIUM,
         fontSize: 12,
         paddingLeft: 10,
         marginBottom: 10,

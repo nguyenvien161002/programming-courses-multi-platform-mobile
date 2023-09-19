@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { STYLES } from '~/constants';
 
 const styles = StyleSheet.create({
     btn: {
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
     text: {
         paddingEnd: 20,
         fontSize: 14,
-        fontFamily: 'Montserrat-Regular'
+        fontFamily: STYLES.FONT_REGULAR
     }
 });
 

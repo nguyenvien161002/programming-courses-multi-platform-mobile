@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         },
         title: {
             color: '#333',
-            fontFamily: 'Montserrat-Medium',
+            fontFamily: STYLES.FONT_MEDIUM,
             fontSize: 24,
             margin: 40,
             textAlign: 'center',
@@ -55,11 +55,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         text: {
-            fontFamily: 'Montserrat-Regular',
+            fontFamily: STYLES.FONT_REGULAR,
             fontSize: 14,
         },
         btnAuth: {
-            fontFamily: 'Montserrat-Medium',
+            fontFamily: STYLES.FONT_MEDIUM,
             padding: 10,
             paddingLeft: 4,
             color: STYLES.PRIMARY_COLOR,
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
         text: {
             marginTop: 10,
             padding: 10,
-            fontFamily: 'Montserrat-Medium',
+            fontFamily: STYLES.FONT_MEDIUM,
             fontSize: 14,
             color: STYLES.PRIMARY_COLOR,
             position: 'absolute',
@@ -84,14 +84,14 @@ const styles = StyleSheet.create({
         bottom: 20,
         backgroundColor: 'transparent',
         text: {
-            fontFamily: 'Montserrat-Regular',
+            fontFamily: STYLES.FONT_REGULAR,
             fontSize: 12,
             textAlign: 'center',
             fontWeight: 400,
             lineHeight: 18,
         },
         termsOfUse: {
-            fontFamily: 'Montserrat-Regular',
+            fontFamily: STYLES.FONT_REGULAR,
             textDecorationLine: 'underline',
             fontWeight: 500,
         },

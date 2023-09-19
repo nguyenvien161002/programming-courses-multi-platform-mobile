@@ -1,12 +1,14 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { STYLES, TABS } from '~/constants';
+import { publicTabs } from '~/tabs';
+import { STYLES } from '~/constants';
 import TabBarIcon from '../TabBarButton';
 import styles from './stylesBottomBar';
 
 const Tab = createBottomTabNavigator();
 
 function BottomBar() {
+   
     return (
         <Tab.Navigator
             initialRouteName={'Home'}
@@ -17,7 +19,7 @@ function BottomBar() {
                 tabBarActiveTintColor: STYLES.PRIMARY_COLOR,
             }}
         >
-            {TABS.map((tab, index) => {
+            {publicTabs.map((tab, index) => {
                 return (
                     <Tab.Screen
                         key={index}

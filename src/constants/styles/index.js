@@ -19,6 +19,10 @@ const STYLES = {
     ICON_COLOR: '#707070',
     SCROLLBAR_COLOR: '#d9d9d9',
     BUTTON_GRADIENT: ['#2cccff', '#22dfbf'],
+    FONT_REGULAR: 'Montserrat-Regular',
+    FONT_MEDIUM: 'Montserrat-Medium',
+    FONT_SEMIBOLD: 'Montserrat-SemiBold',
+    FONT_EXTRABOLD: 'Montserrat-ExtraBold',
 };
 
 export default STYLES;

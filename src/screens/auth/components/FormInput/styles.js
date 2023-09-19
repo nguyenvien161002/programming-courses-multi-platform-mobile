@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         paddingLeft: 16,
         paddingRight: 4,
         text: {
-            fontFamily: 'Montserrat-Regular',
+            fontFamily: STYLES.FONT_REGULAR,
             fontSize: 14,
         },
         icon: {
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#22dfbf',
         justifyContent: 'center',
         text: {
-            fontFamily: 'Montserrat-Medium',
+            fontFamily: STYLES.FONT_MEDIUM,
             fontSize: 14,
             color: 'white',
         },
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
         flex: 1,
         width: '100%',
         height: '100%',
-        fontFamily: 'Montserrat-Regular',
+        fontFamily: STYLES.FONT_REGULAR,
         fontSize: 14,
         marginLeft: 20,
         marginRight: 20,

@@ -12,7 +12,7 @@ import images from '~/assets/images';
 
 function AuthScreen() {
     const dispatch = useDispatch();
-    const Logo = images.logo;
+    const { Logo } = images;
     
     const { getContentScreen, getSignInWithEmail, getSignInWithNumberPhone } = authSelectors;
     const contentScreen = useSelector(getContentScreen);

@@ -1,17 +1,17 @@
 import { Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { EvilIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 
+import { STYLES } from '~/constants';
+import Avatar from '~/components/Avatar';
 import styles from './stylesTopBar';
 import images from '~/assets/images';
-import Avatar from '~/components/Avatar';
-import { LinearGradient } from 'expo-linear-gradient';
-import { STYLES } from '~/constants';
-import { EvilIcons } from '@expo/vector-icons';
 
 function TopBar() {
+    const { Logo } = images;
     const navigation = useNavigation();
-    const Logo = images.logo;
     const [isSignedIn, setIsSignedIn] = useState(false);
     
     return (

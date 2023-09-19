@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
         userName: {
             flex: 1,
             marginLeft: 10,
-            fontFamily: 'Montserrat-SemiBold',
+            fontFamily: STYLES.FONT_SEMIBOLD,
             fontSize: 14,
             color: STYLES.TEXT_COLOR,
         },

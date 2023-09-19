@@ -6,7 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 
-import { publicStacks } from '~/stack';
+import { publicStacks } from '~/stacks';
 import { STYLES } from '~/constants';
 import store from '~/redux';
 
@@ -19,6 +19,7 @@ function App() {
             'Montserrat-Regular': require('~/assets/fonts/Montserrat/Montserrat-Regular.ttf'),
             'Montserrat-Medium': require('~/assets/fonts/Montserrat/Montserrat-Medium.ttf'),
             'Montserrat-SemiBold': require('~/assets/fonts/Montserrat/Montserrat-SemiBold.ttf'),
+            'Montserrat-ExtraBold': require('~/assets/fonts/Montserrat/Montserrat-ExtraBold.ttf'),
             'Roboto-Regular': require('~/assets/fonts/Roboto/Roboto-Regular.ttf'),
         });
     };
@@ -50,7 +51,7 @@ function App() {
 
     return (
         <Provider store={store}>
-            <View style={{ flex: 1, fontFamily: 'Montserrat-Regular' }} onLayout={onLayoutRootView}>
+            <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
                 <StatusBar barStyle={'dark-content'} backgroundColor={STYLES.WHITE_COLOR} />
                 <NavigationContainer>
                     <Stack.Navigator initialRouteName={'DefaultLayout'} screenOptions={{ headerShown: false }}>

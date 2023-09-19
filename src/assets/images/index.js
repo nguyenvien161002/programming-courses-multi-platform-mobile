@@ -3,9 +3,11 @@ import Personal from '~/assets/images/social/personal.svg';
 import Google from '~/assets/images/social/google.svg';
 import Facebook from '~/assets/images/social/facebook.svg';
 import Github from '~/assets/images/social/github.svg';
+import CrownIconCourse from '~/assets/images/crown_icon_course.svg';
 
 const images = {
-    logo: Logo,
+    Logo,
+    CrownIconCourse,
     searchIcon: require('~/assets/images/search-icon.svg'),
     hideousMeow: require('~/assets/images/hideous-meow.jpg'),
     meowMeow: require('~/assets/images/meow-meow.jpg'),
@@ -17,7 +19,6 @@ const images = {
     crown: require('~/assets/images/crown.svg'),
     dmca: require('~/assets/images/dmca.png'),
     noAvatar: require('~/assets/images/fallback-no-avatar.jpg'),
-    crownIconCourse: require('~/assets/images/crown_icon_course.svg'),
     fbGroupCards: require('~/assets/images/fb-group-cards.png'),
     payments: {
         paypal: require('~/assets/images/payments/paypal.png'),

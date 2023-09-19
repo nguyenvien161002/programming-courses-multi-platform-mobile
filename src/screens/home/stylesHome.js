@@ -1,14 +1,17 @@
 import { Dimensions, StyleSheet } from 'react-native';
-const { height } = Dimensions.get('window');
+import { HOME } from '~/constants';
+
+const { height, width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
+    scroll: {
+        flex: 1,
+    },
     wrapper: {
         flex: 1,
-        backgroundColor: 'red',
-        height: height
-    },
-    btnSignIn: {
-        
+        padding: HOME.PADDING,
+        paddingTop: 8,
+        paddingBottom: 50,
     },
 });
 
